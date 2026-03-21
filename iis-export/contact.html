@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Rajprabha Associates</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo-block"><div class="logo-text"><h1>Rajprabha Associates</h1><span>A SAINATH FOUNDATIONS COMPANY</span></div></div>
+    <nav><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li><li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html" class="active">Contact Us</a></li>
+    </ul></nav>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu"><ul>
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact Us</a></li>
+  </ul></div>
+</header>
+
+<div class="page-hero">
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you. Reach out to our sales team today.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Contact Us</div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Office Address</h4><p>123 Builder Street, Business District<br>Your City - 400001<br>Maharashtra, India</p></div></div>
+          <div class="contact-item"><div class="contact-icon">📞</div><div><h4>Phone Numbers</h4><p>+91 98765 43210 (Sales)<br>+91 98765 43211 (Support)</p></div></div>
+          <div class="contact-item"><div class="contact-icon">📧</div><div><h4>Email</h4><p>info@rajprabha.com<br>sales@rajprabha.com</p></div></div>
+          <div class="contact-item"><div class="contact-icon">⏰</div><div><h4>Office Hours</h4><p>Monday - Saturday: 10:00 AM - 7:00 PM<br>Sunday: 11:00 AM - 4:00 PM</p></div></div>
+        </div>
+        <div class="map-placeholder">🗺️ Map coming soon (embed Google Maps here)</div>
+      </div>
+      <div>
+        <h3 style="font-size:1.3rem;font-weight:700;color:#1a2940;margin-bottom:20px;">Send Us a Message</h3>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <label>Full Name *</label>
+          <input type="text" placeholder="Enter your full name" required>
+          <label>Phone Number *</label>
+          <input type="tel" placeholder="+91 98765 43210" required>
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com">
+          <label>Project Interested In</label>
+          <select>
+            <option value="">Select a project</option>
+            <option>Rajprabha Heights</option>
+            <option>Rajprabha Garden Villas</option>
+            <option>Rajprabha Skyline</option>
+            <option>Rajprabha Green Valley</option>
+            <option>General Inquiry</option>
+          </select>
+          <label>Message</label>
+          <textarea placeholder="Tell us more about your requirements..."></textarea>
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;font-size:1rem;">Send Message</button>
+        </form>
+        <div id="successMsg" style="display:none;background:#d4edda;color:#155724;padding:16px;border-radius:6px;margin-top:16px;text-align:center;font-weight:600;">Thank you! We'll get back to you within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="footer-inner">
+  <div class="footer-grid">
+    <div class="footer-brand"><h2>Rajprabha Associates</h2><span>A SAINATH FOUNDATIONS COMPANY</span><p>Building landmark projects with trust and commitment.</p></div>
+    <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h3>Projects</h3><ul><li><a href="project-1.html">Rajprabha Heights</a></li><li><a href="project-2.html">Garden Villas</a></li><li><a href="project-3.html">Rajprabha Skyline</a></li><li><a href="project-4.html">Green Valley</a></li></ul></div>
+    <div class="footer-col"><h3>Contact</h3><p>123 Builder Street<br>Your City - 400001<br>+91 98765 43210<br>info@rajprabha.com</p></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2024 Rajprabha Associates. All rights reserved. | A <a href="about.html" class="sainath-link">Sainath Foundations</a> Company</p></div>
+</div></footer>
+
+<script>
+function toggleMenu(){var m=document.getElementById('mobileMenu');m.classList.toggle('open');}
+function handleSubmit(e){
+  e.preventDefault();
+  document.getElementById('successMsg').style.display='block';
+  e.target.reset();
+  setTimeout(function(){ document.getElementById('successMsg').style.display='none'; }, 5000);
+}
+</script>
+</body></html>

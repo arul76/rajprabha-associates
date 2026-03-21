@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajprabha Associates - Premium Real Estate Developers</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-block">
+      <div class="logo-text">
+        <h1>Rajprabha Associates</h1>
+        <span>A SAINATH FOUNDATIONS COMPANY</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><small style="color:#c9a84c;display:block;padding:8px 0;">A Sainath Foundations Company</small></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO CAROUSEL -->
+<section class="hero">
+  <div class="slides" id="heroSlides">
+    <div class="slide">
+      <div class="slide-bg-placeholder"></div>
+      <div class="slide-overlay">
+        <div class="slide-content">
+          <h2>Building Dreams, Crafting Excellence</h2>
+          <p>Premium residential and commercial projects with a legacy of trust and quality construction in the heart of the city.</p>
+          <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-bg-placeholder" style="background:linear-gradient(135deg,#2d4a70,#1a2940);"></div>
+      <div class="slide-overlay">
+        <div class="slide-content">
+          <h2>Luxury Living Redefined</h2>
+          <p>Experience world-class amenities, thoughtful design, and prime locations across all our residential developments.</p>
+          <a href="projects.html" class="btn btn-primary">View Residences</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-bg-placeholder" style="background:linear-gradient(135deg,#1a3a2a,#2d5a40);"></div>
+      <div class="slide-overlay">
+        <div class="slide-content">
+          <h2>Your Trusted Real Estate Partner</h2>
+          <p>Over two decades of experience delivering landmark projects on time, with uncompromising quality standards.</p>
+          <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:#fff;">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-prev" onclick="changeSlide(-1)">&#8249;</button>
+  <button class="carousel-next" onclick="changeSlide(1)">&#8250;</button>
+  <div class="carousel-dots">
+    <div class="dot active" onclick="goSlide(0)"></div>
+    <div class="dot" onclick="goSlide(1)"></div>
+    <div class="dot" onclick="goSlide(2)"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><h3>20+</h3><p>Years of Experience</p></div>
+    <div class="stat-item"><h3>150+</h3><p>Projects Delivered</p></div>
+    <div class="stat-item"><h3>5000+</h3><p>Happy Families</p></div>
+    <div class="stat-item"><h3>12</h3><p>Ongoing Projects</p></div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section style="background:#fff;">
+  <div class="section-inner">
+    <h2 class="section-title">Why Choose Rajprabha?</h2>
+    <div class="divider"></div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏗️</div>
+        <h3>Quality Construction</h3>
+        <p>Using premium materials and latest construction techniques for structures built to last generations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📍</div>
+        <h3>Prime Locations</h3>
+        <p>Strategically located projects with excellent connectivity to schools, hospitals, and business hubs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⏰</div>
+        <h3>On-Time Delivery</h3>
+        <p>Consistent track record of delivering projects on schedule, respecting your time and investment.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>Transparent Pricing</h3>
+        <p>No hidden costs. Clear pricing structure with flexible payment plans tailored to your needs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h3>Eco-Friendly Design</h3>
+        <p>Sustainable building practices and green spaces incorporated into every project we develop.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3>After-Sales Support</h3>
+        <p>Dedicated customer care team available post-possession for all your maintenance and service needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section style="background:#f8f9fa;">
+  <div class="section-inner">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="divider"></div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2940,#2d4a70);"></div></div>
+        <div class="project-info">
+          <h3>Rajprabha Heights</h3>
+          <p>Luxury 2 &amp; 3 BHK apartments with panoramic views and world-class amenities.</p>
+          <div class="project-meta">
+            <span class="status-badge status-completed">Completed</span>
+            <a href="project-1.html" class="btn btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#2d4a70,#1a2940);"></div></div>
+        <div class="project-info">
+          <h3>Rajprabha Garden Villas</h3>
+          <p>Exclusive independent villas with private gardens in a gated township.</p>
+          <div class="project-meta">
+            <span class="status-badge status-ongoing">Ongoing</span>
+            <a href="project-2.html" class="btn btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#1a3a2a,#2d5a40);"></div></div>
+        <div class="project-info">
+          <h3>Rajprabha Skyline</h3>
+          <p>Premium high-rise residential tower in the heart of the commercial district.</p>
+          <div class="project-meta">
+            <span class="status-badge status-proposed">Proposed</span>
+            <a href="project-3.html" class="btn btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="projects.html" class="btn btn-primary">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="padding:56px 24px;">
+  <div class="section-inner">
+    <h2>Ready to Find Your Dream Home?</h2>
+    <p>Get in touch with our sales team today. We'll help you find the perfect property.</p>
+    <a href="contact.html" class="btn btn-white">Contact Us Today</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Rajprabha Associates</h2>
+        <span>A SAINATH FOUNDATIONS COMPANY</span>
+        <p>Building landmark projects with trust, quality, and a commitment to excellence for over two decades.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Projects</h3>
+        <ul>
+          <li><a href="project-1.html">Rajprabha Heights</a></li>
+          <li><a href="project-2.html">Garden Villas</a></li>
+          <li><a href="project-3.html">Rajprabha Skyline</a></li>
+          <li><a href="project-4.html">Green Valley</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>123 Builder Street<br>Your City - 400001<br><br>+91 98765 43210<br>info@rajprabha.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Rajprabha Associates. All rights reserved. | A <a href="about.html" class="sainath-link">Sainath Foundations</a> Company</p>
+      <p>Designed with &#10084; for quality living</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var currentSlide = 0;
+var totalSlides = 3;
+var autoPlay;
+function showSlide(n) {
+  currentSlide = (n + totalSlides) % totalSlides;
+  document.getElementById('heroSlides').style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+  document.querySelectorAll('.dot').forEach(function(d,i){ d.classList.toggle('active', i === currentSlide); });
+}
+function changeSlide(dir) { clearInterval(autoPlay); showSlide(currentSlide + dir); startAuto(); }
+function goSlide(n) { clearInterval(autoPlay); showSlide(n); startAuto(); }
+function startAuto() { autoPlay = setInterval(function(){ showSlide(currentSlide + 1); }, 5000); }
+startAuto();
+function toggleMenu() {
+  var m = document.getElementById('mobileMenu');
+  m.classList.toggle('open');
+}
+</script>
+</body>
+</html>

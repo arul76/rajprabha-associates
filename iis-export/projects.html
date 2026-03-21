@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Rajprabha Associates</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-block">
+      <div class="logo-text"><h1>Rajprabha Associates</h1><span>A SAINATH FOUNDATIONS COMPANY</span></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><small style="color:#c9a84c;display:block;padding:8px 0;">A Sainath Foundations Company</small></li>
+    </ul>
+  </div>
+</header>
+
+<div class="page-hero">
+  <h1>Our Projects</h1>
+  <p>Explore our portfolio of completed, ongoing, and proposed developments</p>
+  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Projects</div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterProjects('all', this)">All Projects</button>
+      <button class="filter-tab" onclick="filterProjects('completed', this)">Completed</button>
+      <button class="filter-tab" onclick="filterProjects('ongoing', this)">Ongoing</button>
+      <button class="filter-tab" onclick="filterProjects('proposed', this)">Proposed</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card" data-cat="completed">
+        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2940,#2d4a70);"></div></div>
+        <div class="project-info">
+          <h3>Rajprabha Heights</h3>
+          <p>Luxury 2 &amp; 3 BHK apartments with panoramic views, rooftop garden, and world-class amenities.</p>
+          <div class="project-meta">
+            <span class="status-badge status-completed">Completed</span>
+            <a href="project-1.html" class="btn btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-cat="ongoing">
+        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#2d4a70,#1a2940);"></div></div>
+        <div class="project-info">
+          <h3>Rajprabha Garden Villas</h3>
+          <p>Exclusive independent villas with private gardens in a gated township with 24/7 security.</p>
+          <div class="project-meta">
+            <span class="status-badge status-ongoing">Ongoing</span>
+            <a href="project-2.html" class="btn btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-cat="proposed">
+        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#1a3a2a,#2d5a40);"></div></div>
+        <div class="project-info">
+          <h3>Rajprabha Skyline</h3>
+          <p>Premium high-rise residential tower in the heart of the commercial district with sky lounges.</p>
+          <div class="project-meta">
+            <span class="status-badge status-proposed">Proposed</span>
+            <a href="project-3.html" class="btn btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-cat="completed">
+        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#3a2a1a,#5a4a2d);"></div></div>
+        <div class="project-info">
+          <h3>Rajprabha Green Valley</h3>
+          <p>Eco-friendly residential complex surrounded by lush greenery with rainwater harvesting.</p>
+          <div class="project-meta">
+            <span class="status-badge status-completed">Completed</span>
+            <a href="project-4.html" class="btn btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand"><h2>Rajprabha Associates</h2><span>A SAINATH FOUNDATIONS COMPANY</span><p>Building landmark projects with trust, quality, and commitment.</p></div>
+      <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h3>Projects</h3><ul><li><a href="project-1.html">Rajprabha Heights</a></li><li><a href="project-2.html">Garden Villas</a></li><li><a href="project-3.html">Rajprabha Skyline</a></li><li><a href="project-4.html">Green Valley</a></li></ul></div>
+      <div class="footer-col"><h3>Contact</h3><p>123 Builder Street<br>Your City - 400001<br><br>+91 98765 43210<br>info@rajprabha.com</p></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Rajprabha Associates. All rights reserved. | A <a href="about.html" class="sainath-link">Sainath Foundations</a> Company</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { var m = document.getElementById('mobileMenu'); m.classList.toggle('open'); }
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.filter-tab').forEach(function(t){ t.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(function(c){
+    if (cat === 'all' || c.getAttribute('data-cat') === cat) c.classList.remove('hidden');
+    else c.classList.add('hidden');
+  });
+}
+</script>
+</body>
+</html>
