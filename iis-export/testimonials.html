@@ -3,91 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testimonials - Rajprabha Associates</title>
+  <title>Testimonials – Rajprabha Associates</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header>
-  <div class="header-inner">
-    <div class="logo-block"><div class="logo-text"><h1>Rajprabha Associates</h1><span>A SAINATH FOUNDATIONS COMPANY</span></div></div>
-    <nav><ul>
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="testimonials.html" class="active">Testimonials</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul></nav>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><div class="nav-brand-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><span class="nav-brand-name">RAJPRABHA</span><span class="nav-brand-sub">ASSOCIATES</span></div></a>
+    <nav><ul class="nav-links"><li><a href="index.html">HOME</a></li><li><a href="about.html">ABOUT US</a></li><li class="nav-dropdown"><button class="nav-dropdown-toggle">PROJECTS <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button><div class="nav-dropdown-menu"><a href="projects.html">All Projects</a><a href="projects.html?filter=completed">Completed</a><a href="projects.html?filter=ongoing">Ongoing</a><a href="projects.html?filter=proposed">Proposed</a></div></li><li><a href="testimonials.html" class="active">TESTIMONIALS</a></li><li><a href="contact.html">CONTACT US</a></li></ul></nav>
+    <div class="nav-sainath"><img src="images/sainath-logo.png" alt="Sainath Foundations"></div>
+    <button class="nav-hamburger" onclick="toggleMenu()"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
-  <div class="mobile-menu" id="mobileMenu"><ul>
-    <li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact Us</a></li>
-  </ul></div>
+  <div class="mobile-menu" id="mobileMenu"><div class="mobile-sainath"><img src="images/sainath-logo.png" alt="Sainath Foundations"></div><a href="index.html">HOME</a><a href="about.html">ABOUT US</a><a href="projects.html">PROJECTS</a><a href="testimonials.html">TESTIMONIALS</a><a href="contact.html">CONTACT US</a></div>
 </header>
 
-<div class="page-hero">
-  <h1>What Our Customers Say</h1>
-  <p>Trusted by thousands of happy homeowners across the city</p>
-  <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Testimonials</div>
-</div>
+<section class="page-header">
+  <div class="page-header-bg" style="background-image:url('images/hero-main.jpg')"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-content">
+    <span class="section-tag">Client Stories</span>
+    <h1>Testimonials</h1>
+    <span class="gold-bar"></span>
+  </div>
+</section>
 
-<section>
-  <div class="section-inner">
-    <div class="stats-inner" style="background:#f8f9fa;border-radius:10px;padding:32px;margin-bottom:48px;">
-      <div class="stat-item"><h3 style="color:#1a2940;">5000+</h3><p style="color:#555;">Happy Homeowners</p></div>
-      <div class="stat-item"><h3 style="color:#1a2940;">4.8/5</h3><p style="color:#555;">Average Rating</p></div>
-      <div class="stat-item"><h3 style="color:#1a2940;">98%</h3><p style="color:#555;">Would Recommend</p></div>
-      <div class="stat-item"><h3 style="color:#1a2940;">20+</h3><p style="color:#555;">Years of Trust</p></div>
-    </div>
-    <div class="testimonials-grid">
+<section class="section bg-gray">
+  <div class="container">
+    <div class="grid-3">
+
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial-text">"We purchased our 3 BHK at Rajprabha Heights and couldn't be happier. The quality of construction is outstanding and the amenities are exactly as promised. The team was transparent throughout the process."</p>
-        <div class="testimonial-author"><div class="author-avatar">R</div><div class="author-info"><h4>Ramesh Sharma</h4><span>Rajprabha Heights</span></div></div>
+        <div class="stars">
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"The quality of construction and the attention to detail at Rajprabha Heights is truly outstanding. From the lobby to our apartment, every corner reflects craftsmanship. We are absolutely delighted!"</p>
+        <div class="testimonial-author"><p class="testimonial-name">Priya Sharma</p><p class="testimonial-role">Homeowner</p><p class="testimonial-project">Rajprabha Heights, Pune</p></div>
       </div>
+
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial-text">"Booking a villa at Garden Villas was the best decision of my life. The project is progressing as per schedule and the customer support team is always available to answer our queries."</p>
-        <div class="testimonial-author"><div class="author-avatar">P</div><div class="author-info"><h4>Priya Nair</h4><span>Garden Villas</span></div></div>
+        <div class="stars">
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"As an investor, transparency and timely delivery are paramount. Rajprabha Associates delivered on every promise, and the appreciation on my property has been remarkable. Highly recommended!"</p>
+        <div class="testimonial-author"><p class="testimonial-name">Amit Patil</p><p class="testimonial-role">Investor</p><p class="testimonial-project">Rajprabha Garden Villas, Nashik</p></div>
       </div>
+
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial-text">"Rajprabha Associates delivered our apartment on time without any hassle. The finishing work is premium and every detail has been carefully executed. Highly recommended!"</p>
-        <div class="testimonial-author"><div class="author-avatar">A</div><div class="author-info"><h4>Anil Kumar</h4><span>Green Valley</span></div></div>
+        <div class="stars">
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"Moving into Rajprabha Heights was the best decision of our lives. The amenities, the neighbourhood, and the support from the team post-possession has been exceptional."</p>
+        <div class="testimonial-author"><p class="testimonial-name">Sunita Desai</p><p class="testimonial-role">Homeowner</p><p class="testimonial-project">Rajprabha Heights, Pune</p></div>
       </div>
+
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial-text">"After years of searching, we finally found our dream home with Rajprabha. The location is perfect, the construction quality is top-notch, and the pricing was fair and transparent."</p>
-        <div class="testimonial-author"><div class="author-avatar">S</div><div class="author-info"><h4>Sunita Mehta</h4><span>Rajprabha Heights</span></div></div>
+        <div class="stars">
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-empty" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"We purchased a villa as a weekend home. The serene environment, quality of construction, and community feel at Garden Villas surpassed our expectations. A perfect retreat!"</p>
+        <div class="testimonial-author"><p class="testimonial-name">Rajan Mehta</p><p class="testimonial-role">Business Owner</p><p class="testimonial-project">Rajprabha Garden Villas, Nashik</p></div>
       </div>
+
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial-text">"The eco-friendly features at Green Valley are impressive. Solar panels, rainwater harvesting, EV charging -- everything works perfectly. Our electricity bills have reduced by 40%. Great investment!"</p>
-        <div class="testimonial-author"><div class="author-avatar">V</div><div class="author-info"><h4>Vijay Iyer</h4><span>Green Valley</span></div></div>
+        <div class="stars">
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"Being a first-time homebuyer, I was nervous, but the Rajprabha team guided me through every step. The transparency in documentation and payment process was refreshing."</p>
+        <div class="testimonial-author"><p class="testimonial-name">Kavita Joshi</p><p class="testimonial-role">First-Time Homebuyer</p><p class="testimonial-project">Rajprabha Heights, Pune</p></div>
       </div>
+
       <div class="testimonial-card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-        <p class="testimonial-text">"We have been residents of Rajprabha Heights for two years now. The after-sales support is excellent. Any maintenance issues are handled promptly. The management team is very professional."</p>
-        <div class="testimonial-author"><div class="author-avatar">D</div><div class="author-info"><h4>Deepika Rao</h4><span>Rajprabha Heights</span></div></div>
+        <div class="stars">
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"Managing property purchase from abroad is challenging. Rajprabha Associates made it seamless with virtual tours, digital documentation, and dedicated NRI support. Truly world-class service."</p>
+        <div class="testimonial-author"><p class="testimonial-name">Deepak Kulkarni</p><p class="testimonial-role">NRI Investor</p><p class="testimonial-project">Rajprabha Garden Villas, Nashik</p></div>
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section">
-  <div class="section-inner">
-    <h2>Join Our Happy Homeowners</h2>
-    <p>Explore our projects and find your perfect home today.</p>
-    <a href="projects.html" class="btn btn-white">Browse Projects</a>
-  </div>
+  <h2>Ready to Find Your Dream Home?</h2>
+  <p>Join thousands of happy families who trust Rajprabha Associates.</p>
+  <a href="contact.html" class="btn-gold">GET IN TOUCH</a>
 </section>
 
-<footer><div class="footer-inner">
-  <div class="footer-grid">
-    <div class="footer-brand"><h2>Rajprabha Associates</h2><span>A SAINATH FOUNDATIONS COMPANY</span><p>Building landmark projects with trust and commitment.</p></div>
-    <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-col"><h3>Projects</h3><ul><li><a href="project-1.html">Rajprabha Heights</a></li><li><a href="project-2.html">Garden Villas</a></li><li><a href="project-3.html">Rajprabha Skyline</a></li><li><a href="project-4.html">Green Valley</a></li></ul></div>
-    <div class="footer-col"><h3>Contact</h3><p>123 Builder Street<br>Your City - 400001<br>+91 98765 43210</p></div>
-  </div>
-  <div class="footer-bottom"><p>&copy; 2024 Rajprabha Associates. All rights reserved. | A <a href="about.html" class="sainath-link">Sainath Foundations</a> Company</p></div>
-</div></footer>
-<script>function toggleMenu(){var m=document.getElementById('mobileMenu');m.classList.toggle('open');}</script>
-</body></html>
+<footer><div class="footer-inner"><div class="footer-brand"><div class="nav-brand"><div class="nav-brand-icon" style="background:var(--gold)"><svg viewBox="0 0 24 24" style="color:var(--navy)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><span class="nav-brand-name" style="color:#fff">RAJPRABHA</span><span class="nav-brand-sub">ASSOCIATES</span></div></div><p>Building dreams, shaping skylines. Your trusted partner for premium residential and commercial construction across Maharashtra.</p></div><div><p class="footer-heading">Quick Links</p><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact Us</a></li></ul></div><div><p class="footer-heading">Contact Info</p><div class="footer-contact"><div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@rajprabha.in">info@rajprabha.in</a></div></div></div></div><div class="footer-bottom"><div class="footer-bottom-inner"><p>&copy; <span id="yr"></span> Rajprabha Associates. All rights reserved.</p></div></div></footer>
+<script>function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

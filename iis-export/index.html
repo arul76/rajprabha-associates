@@ -3,248 +3,326 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rajprabha Associates - Premium Real Estate Developers</title>
+  <title>Rajprabha Associates – Building Dreams, Shaping Skylines</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <div class="logo-block">
-      <div class="logo-text">
-        <h1>Rajprabha Associates</h1>
-        <span>A SAINATH FOUNDATIONS COMPANY</span>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-brand-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div>
+        <span class="nav-brand-name">RAJPRABHA</span>
+        <span class="nav-brand-sub">ASSOCIATES</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle">PROJECTS <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="nav-dropdown-menu">
+            <a href="projects.html">All Projects</a>
+            <a href="projects.html?filter=completed">Completed</a>
+            <a href="projects.html?filter=ongoing">Ongoing</a>
+            <a href="projects.html?filter=proposed">Proposed</a>
+          </div>
+        </li>
+        <li><a href="testimonials.html">TESTIMONIALS</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+    <div class="nav-sainath">
+      <img src="images/sainath-logo.png" alt="Sainath Foundations">
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <svg id="menu-icon" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-sainath"><img src="images/sainath-logo.png" alt="Sainath Foundations"></div>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT US</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="projects.html?filter=completed" class="sub-link">— Completed</a>
+    <a href="projects.html?filter=ongoing" class="sub-link">— Ongoing</a>
+    <a href="projects.html?filter=proposed" class="sub-link">— Proposed</a>
+    <a href="testimonials.html">TESTIMONIALS</a>
+    <a href="contact.html">CONTACT US</a>
+  </div>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="hero-slide active" id="slide-0" style="background-image:url('images/hero-main.jpg')"></div>
+  <div class="hero-slide" id="slide-1" style="background-image:url('images/hero-quality.jpg')"></div>
+  <div class="hero-slide" id="slide-2" style="background-image:url('images/hero-commitment.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-inner" id="hero-text">
+      <p class="hero-tag" id="slide-tag">Welcome to</p>
+      <h1 class="hero-title" id="slide-title">Rajprabha
+Associates</h1>
+      <p class="hero-subtitle" id="slide-subtitle">Building Dreams. Shaping Skylines.</p>
+      <p class="hero-body" id="slide-body">Maharashtra's premier construction company delivering landmark residential and commercial projects since 1999. Crafting spaces that inspire life.</p>
+      <div class="hero-btns">
+        <a href="projects.html" class="btn-gold">OUR PROJECTS</a>
+        <a href="contact.html" class="btn-outline-white">CONTACT US</a>
       </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+  </div>
+  <button class="hero-arrow hero-prev" onclick="changeSlide(-1)" aria-label="Previous slide">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="hero-arrow hero-next" onclick="changeSlide(1)" aria-label="Next slide">
+    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" onclick="goToSlide(0)"></button>
+    <button class="hero-dot" onclick="goToSlide(1)"></button>
+    <button class="hero-dot" onclick="goToSlide(2)"></button>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div><p class="stat-value">25+</p><p class="stat-label">Years of Excellence</p></div>
+    <div><p class="stat-value">50+</p><p class="stat-label">Projects Delivered</p></div>
+    <div><p class="stat-value">3000+</p><p class="stat-label">Happy Families</p></div>
+    <div><p class="stat-value">&#8377;500Cr+</p><p class="stat-label">Projects Value</p></div>
+  </div>
+</div>
+
+<!-- FEATURED PROJECTS -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-tag">Our Portfolio</span>
+      <h2>Featured Projects</h2>
+      <span class="gold-bar"></span>
+    </div>
+    <div class="grid-3">
+
+      <div class="project-card">
+        <div class="project-card-img">
+          <img src="images/proj-completed-1.jpg" alt="Rajprabha Heights">
+          <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-type">Residential Flats</p>
+          <h3 class="project-card-title">Rajprabha Heights</h3>
+          <p class="project-card-loc"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Baner, Pune</p>
+          <p class="project-card-desc">Premium 2BHK and 3BHK apartments with world-class amenities in the heart of Baner, Pune.</p>
+          <a href="project-1.html" class="project-card-link">VIEW DETAILS <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img">
+          <img src="images/proj-completed-2.jpg" alt="Rajprabha Garden Villas">
+          <span class="badge badge-completed">Completed</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-type">Residential Villas</p>
+          <h3 class="project-card-title">Rajprabha Garden Villas</h3>
+          <p class="project-card-loc"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Gangapur Road, Nashik</p>
+          <p class="project-card-desc">Serene row house villas with private gardens, offering a community lifestyle amidst lush greenery in Nashik.</p>
+          <a href="project-2.html" class="project-card-link">VIEW DETAILS <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-img">
+          <img src="images/proj-ongoing-1.jpg" alt="Rajprabha Skyline">
+          <span class="badge badge-ongoing">Ongoing</span>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-type">Residential Flats</p>
+          <h3 class="project-card-title">Rajprabha Skyline</h3>
+          <p class="project-card-loc"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Hinjewadi, Pune</p>
+          <p class="project-card-desc">A landmark luxury high-rise redefining the Pune skyline with breathtaking views and ultra-premium residences.</p>
+          <a href="project-3.html" class="project-card-link">VIEW DETAILS <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="projects.html" class="btn-outline-navy">VIEW ALL PROJECTS <svg style="width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;vertical-align:middle" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section bg-gray">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-tag">Our Strengths</span>
+      <h2>Why Choose Us</h2>
+      <span class="gold-bar"></span>
+    </div>
+    <div class="grid-4">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <h3>25+ Years Experience</h3>
+        <p>Decades of excellence in construction and development across Maharashtra.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Quality Assured</h3>
+        <p>ISO-certified construction processes and premium grade materials used throughout.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Customer-First</h3>
+        <p>Transparent dealings, timely delivery, and post-possession support for every buyer.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3>Strong ROI</h3>
+        <p>Strategically located projects ensuring long-term value appreciation for investors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS TEASER -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-tag">What Our Clients Say</span>
+      <h2>Testimonials</h2>
+      <span class="gold-bar"></span>
+    </div>
+    <div class="grid-2" style="max-width:900px;margin:0 auto">
+      <div class="testimonial-card" style="background:#F3F5F7;box-shadow:none">
+        <div class="stars">
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"The quality of construction and the attention to detail at Rajprabha Heights is truly outstanding. We are absolutely delighted with our new home!"</p>
+        <div class="testimonial-author">
+          <p class="testimonial-name">Priya Sharma</p>
+          <p class="testimonial-role">Homeowner, Rajprabha Heights</p>
+        </div>
+      </div>
+      <div class="testimonial-card" style="background:#F3F5F7;box-shadow:none">
+        <div class="stars">
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star star-filled" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="testimonial-quote">"As an investor, I value transparency and timely delivery. Rajprabha Associates delivered on every promise. Highly recommended!"</p>
+        <div class="testimonial-author">
+          <p class="testimonial-name">Amit Patil</p>
+          <p class="testimonial-role">Investor, Rajprabha Garden Villas</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="testimonials.html" class="btn-outline-navy">VIEW ALL TESTIMONIALS</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM STATS -->
+<section class="stats-band" style="padding:64px 24px">
+  <div class="stats-grid container">
+    <div><p class="stat-value">25+</p><p class="stat-label">Years in Business</p></div>
+    <div><p class="stat-value">50+</p><p class="stat-label">Projects Completed</p></div>
+    <div><p class="stat-value">3000+</p><p class="stat-label">Happy Families</p></div>
+    <div><p class="stat-value">4</p><p class="stat-label">Cities Presence</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-brand">
+        <div class="nav-brand-icon" style="background:var(--gold)">
+          <svg viewBox="0 0 24 24" style="color:var(--navy)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <span class="nav-brand-name" style="color:#fff">RAJPRABHA</span>
+          <span class="nav-brand-sub">ASSOCIATES</span>
+        </div>
+      </div>
+      <p>Building dreams, shaping skylines. Your trusted partner for premium residential and commercial construction across Maharashtra.</p>
+    </div>
+    <div>
+      <p class="footer-heading">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
     </div>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-      <li><small style="color:#c9a84c;display:block;padding:8px 0;">A Sainath Foundations Company</small></li>
-    </ul>
-  </div>
-</header>
-
-<!-- HERO CAROUSEL -->
-<section class="hero">
-  <div class="slides" id="heroSlides">
-    <div class="slide">
-      <div class="slide-bg-placeholder"></div>
-      <div class="slide-overlay">
-        <div class="slide-content">
-          <h2>Building Dreams, Crafting Excellence</h2>
-          <p>Premium residential and commercial projects with a legacy of trust and quality construction in the heart of the city.</p>
-          <a href="projects.html" class="btn btn-primary">Explore Projects</a>
-        </div>
+    <div>
+      <p class="footer-heading">Contact Info</p>
+      <div class="footer-contact">
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Office No. 204, Rajprabha Plaza,<br>FC Road, Pune – 411004</span></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.65 4.35 2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.12 6.12l1.27-.51a2 2 0 0 1 2.11.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+912012345678">+91 20 1234 5678</a></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@rajprabha.in">info@rajprabha.in</a></div>
       </div>
     </div>
-    <div class="slide">
-      <div class="slide-bg-placeholder" style="background:linear-gradient(135deg,#2d4a70,#1a2940);"></div>
-      <div class="slide-overlay">
-        <div class="slide-content">
-          <h2>Luxury Living Redefined</h2>
-          <p>Experience world-class amenities, thoughtful design, and prime locations across all our residential developments.</p>
-          <a href="projects.html" class="btn btn-primary">View Residences</a>
-        </div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-bg-placeholder" style="background:linear-gradient(135deg,#1a3a2a,#2d5a40);"></div>
-      <div class="slide-overlay">
-        <div class="slide-content">
-          <h2>Your Trusted Real Estate Partner</h2>
-          <p>Over two decades of experience delivering landmark projects on time, with uncompromising quality standards.</p>
-          <a href="contact.html" class="btn btn-outline" style="color:#fff;border-color:#fff;">Contact Us</a>
-        </div>
+    <div>
+      <p class="footer-heading">Follow Us</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.instagram.com" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.twitter.com" class="social-btn" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+        <a href="https://www.linkedin.com" class="social-btn" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
     </div>
   </div>
-  <button class="carousel-prev" onclick="changeSlide(-1)">&#8249;</button>
-  <button class="carousel-next" onclick="changeSlide(1)">&#8250;</button>
-  <div class="carousel-dots">
-    <div class="dot active" onclick="goSlide(0)"></div>
-    <div class="dot" onclick="goSlide(1)"></div>
-    <div class="dot" onclick="goSlide(2)"></div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stats-inner">
-    <div class="stat-item"><h3>20+</h3><p>Years of Experience</p></div>
-    <div class="stat-item"><h3>150+</h3><p>Projects Delivered</p></div>
-    <div class="stat-item"><h3>5000+</h3><p>Happy Families</p></div>
-    <div class="stat-item"><h3>12</h3><p>Ongoing Projects</p></div>
-  </div>
-</div>
-
-<!-- FEATURES -->
-<section style="background:#fff;">
-  <div class="section-inner">
-    <h2 class="section-title">Why Choose Rajprabha?</h2>
-    <div class="divider"></div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🏗️</div>
-        <h3>Quality Construction</h3>
-        <p>Using premium materials and latest construction techniques for structures built to last generations.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📍</div>
-        <h3>Prime Locations</h3>
-        <p>Strategically located projects with excellent connectivity to schools, hospitals, and business hubs.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⏰</div>
-        <h3>On-Time Delivery</h3>
-        <p>Consistent track record of delivering projects on schedule, respecting your time and investment.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💰</div>
-        <h3>Transparent Pricing</h3>
-        <p>No hidden costs. Clear pricing structure with flexible payment plans tailored to your needs.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🌿</div>
-        <h3>Eco-Friendly Design</h3>
-        <p>Sustainable building practices and green spaces incorporated into every project we develop.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🤝</div>
-        <h3>After-Sales Support</h3>
-        <p>Dedicated customer care team available post-possession for all your maintenance and service needs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED PROJECTS -->
-<section style="background:#f8f9fa;">
-  <div class="section-inner">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="divider"></div>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#1a2940,#2d4a70);"></div></div>
-        <div class="project-info">
-          <h3>Rajprabha Heights</h3>
-          <p>Luxury 2 &amp; 3 BHK apartments with panoramic views and world-class amenities.</p>
-          <div class="project-meta">
-            <span class="status-badge status-completed">Completed</span>
-            <a href="project-1.html" class="btn btn-sm">View Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#2d4a70,#1a2940);"></div></div>
-        <div class="project-info">
-          <h3>Rajprabha Garden Villas</h3>
-          <p>Exclusive independent villas with private gardens in a gated township.</p>
-          <div class="project-meta">
-            <span class="status-badge status-ongoing">Ongoing</span>
-            <a href="project-2.html" class="btn btn-sm">View Details</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-thumb"><div style="width:100%;height:100%;background:linear-gradient(135deg,#1a3a2a,#2d5a40);"></div></div>
-        <div class="project-info">
-          <h3>Rajprabha Skyline</h3>
-          <p>Premium high-rise residential tower in the heart of the commercial district.</p>
-          <div class="project-meta">
-            <span class="status-badge status-proposed">Proposed</span>
-            <a href="project-3.html" class="btn btn-sm">View Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:36px;">
-      <a href="projects.html" class="btn btn-primary">View All Projects</a>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section" style="padding:56px 24px;">
-  <div class="section-inner">
-    <h2>Ready to Find Your Dream Home?</h2>
-    <p>Get in touch with our sales team today. We'll help you find the perfect property.</p>
-    <a href="contact.html" class="btn btn-white">Contact Us Today</a>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h2>Rajprabha Associates</h2>
-        <span>A SAINATH FOUNDATIONS COMPANY</span>
-        <p>Building landmark projects with trust, quality, and a commitment to excellence for over two decades.</p>
-      </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Projects</h3>
-        <ul>
-          <li><a href="project-1.html">Rajprabha Heights</a></li>
-          <li><a href="project-2.html">Garden Villas</a></li>
-          <li><a href="project-3.html">Rajprabha Skyline</a></li>
-          <li><a href="project-4.html">Green Valley</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <p>123 Builder Street<br>Your City - 400001<br><br>+91 98765 43210<br>info@rajprabha.com</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Rajprabha Associates. All rights reserved. | A <a href="about.html" class="sainath-link">Sainath Foundations</a> Company</p>
-      <p>Designed with &#10084; for quality living</p>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p>&copy; <span id="yr"></span> Rajprabha Associates. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <script>
-var currentSlide = 0;
-var totalSlides = 3;
-var autoPlay;
-function showSlide(n) {
-  currentSlide = (n + totalSlides) % totalSlides;
-  document.getElementById('heroSlides').style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
-  document.querySelectorAll('.dot').forEach(function(d,i){ d.classList.toggle('active', i === currentSlide); });
+const slides = [
+  { tag:'Welcome to', title:'Rajprabha\nAssociates', subtitle:'Building Dreams. Shaping Skylines.', body:'Maharashtra\'s premier construction company delivering landmark residential and commercial projects since 1999. Crafting spaces that inspire life.' },
+  { tag:'Our Promise', title:'Uncompromising\nQuality', subtitle:'Every Brick. Every Beam. Every Detail.', body:'ISO-certified construction processes, premium-grade materials, and rigorous quality checks at every stage ensure your home stands the test of time.' },
+  { tag:'Our Values', title:'Committed to\nYou', subtitle:'Trust Built, Promises Kept.', body:'From the first handshake to the day you receive your keys, we stand by every commitment — transparent dealings, on-time delivery, and lifelong support.' }
+];
+let current = 0;
+let timer = setInterval(() => changeSlide(1), 5000);
+
+function goToSlide(n) {
+  document.getElementById('slide-' + current).classList.remove('active');
+  document.querySelectorAll('.hero-dot')[current].classList.remove('active');
+  current = (n + slides.length) % slides.length;
+  document.getElementById('slide-' + current).classList.add('active');
+  document.querySelectorAll('.hero-dot')[current].classList.add('active');
+  const s = slides[current];
+  document.getElementById('slide-tag').textContent = s.tag;
+  document.getElementById('slide-title').textContent = s.title;
+  document.getElementById('slide-subtitle').textContent = s.subtitle;
+  document.getElementById('slide-body').textContent = s.body;
+  clearInterval(timer);
+  timer = setInterval(() => changeSlide(1), 5000);
 }
-function changeSlide(dir) { clearInterval(autoPlay); showSlide(currentSlide + dir); startAuto(); }
-function goSlide(n) { clearInterval(autoPlay); showSlide(n); startAuto(); }
-function startAuto() { autoPlay = setInterval(function(){ showSlide(currentSlide + 1); }, 5000); }
-startAuto();
+function changeSlide(dir) { goToSlide(current + dir); }
 function toggleMenu() {
-  var m = document.getElementById('mobileMenu');
-  m.classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
 }
+document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
