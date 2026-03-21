@@ -7,7 +7,7 @@ import type { ProjectStatus } from "../data/projects";
 const tabs = [
   { label: "All", value: "all" },
   { label: "Completed", value: "completed" },
-  { label: "Upcoming", value: "upcoming" },
+  { label: "Ongoing", value: "upcoming" },
   { label: "Proposed", value: "proposed" },
 ];
 

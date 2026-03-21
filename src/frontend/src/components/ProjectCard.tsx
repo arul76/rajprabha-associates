@@ -11,6 +11,12 @@ const statusColors: Record<string, string> = {
   proposed: "bg-amber-100 text-amber-700",
 };
 
+const statusLabels: Record<string, string> = {
+  completed: "Completed",
+  upcoming: "Ongoing",
+  proposed: "Proposed",
+};
+
 interface Props {
   project: Project;
   index: number;
@@ -36,7 +42,7 @@ export default function ProjectCard({ project, index }: Props) {
         <span
           className={`absolute top-3 left-3 text-xs font-heading font-semibold px-3 py-1 rounded-full capitalize ${statusColors[project.status]}`}
         >
-          {project.status}
+          {statusLabels[project.status] ?? project.status}
         </span>
         {project.images.length > 1 && (
           <span className="absolute top-3 right-3 text-xs font-body bg-black/50 text-white px-2 py-1 rounded-full">

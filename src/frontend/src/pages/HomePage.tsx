@@ -181,7 +181,7 @@ export default function HomePage() {
                 <a href="/contact">
                   <Button
                     variant="outline"
-                    className="border-white/40 text-white font-heading font-semibold text-xs tracking-widest rounded-full px-7 py-5 bg-transparent hover:bg-white/10 transition-colors"
+                    className="border-white/40 text-white font-heading font-semibold text-xs tracking-widest rounded-full px-7 py-5 bg-transparent hover:bg-white/10 hover:text-white transition-colors"
                     data-ocid="home.contact_us.button"
                   >
                     CONTACT US
